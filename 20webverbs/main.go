@@ -9,8 +9,8 @@ import (
 )
 
 func main() {
-	fmt.Println("Welcome to web verb video - LCO")
-	//PerformGetRequest()
+	fmt.Println("Welcome to web verb")
+	// PerformGetRequest()
 	// PerformPostJsonRequest()
 	PerformPostFormRequest()
 }
@@ -48,7 +48,7 @@ func PerformPostJsonRequest() {
 		{
 			"coursename":"Let's go with golang",
 			"price": 0,
-			"platform":"learnCodeOnline.in"
+			"platform":"sridhar.go.dev"
 		}
 	`)
 
@@ -62,6 +62,7 @@ func PerformPostJsonRequest() {
 	content, _ := ioutil.ReadAll(response.Body)
 
 	fmt.Println(string(content))
+
 }
 
 func PerformPostFormRequest() {
@@ -70,9 +71,9 @@ func PerformPostFormRequest() {
 	//formdata
 
 	data := url.Values{}
-	data.Add("firstname", "hitesh")
-	data.Add("lastname", "choudhary")
-	data.Add("email", "hitesh@go.dev")
+	data.Add("firstname", "sri")
+	data.Add("lastname", "dhar")
+	data.Add("email", "sridhar@go.dev")
 
 	response, err := http.PostForm(myurl, data)
 	if err != nil {
